@@ -198,7 +198,7 @@ class GPT(nn.Module):
 
         return logits, loss
 
-     def extract_features(self, idx):
+    def extract_features(self, idx):
         b, t = idx.size()
         assert t <= self.block_size, "Cannot forward, model block size is exhausted."
 
